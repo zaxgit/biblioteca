@@ -6,10 +6,16 @@ export default function BookList({ books }) {
       {books.map((book) => {
         return (
           <HorizontalBook
-            key={book.id}
+            key={book.bookId}
             title={book.title}
-            author={book.author}
-            publishedAt={book.publishedAt}
+            subtitle={book.subtitle}
+            mainAuthor={book.mainAuthor}
+            allAuthors={book.authors}
+            categories={book.categories}
+            publishedOn={book.publishedOn}
+            publisher={book.publisher}
+            pageCount={book.pageCount}
+            description={book.description}
             owned={book.isOwned}
             type={book.type}
           />
