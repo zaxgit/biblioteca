@@ -1,25 +1,19 @@
 export default function HorizontalBook({
   title,
   subtitle,
-  mainAuthor,
-  allAuthors,
+  authors,
   bookId,
   publisher,
   publishedOn,
   isOwned,
   pageCount,
 }) {
-  console.log(mainAuthor);
+  console.log(authors);
   return (
     <li className='h-book'>
       <h3 className='book-title'>{title}</h3>
       {subtitle ? <span className='book-subtitle'></span> : ''}
-      <span className='book-author'>{mainAuthor}</span>
-      {allAuthors.length > 1
-        ? allAuthors.map((author, idx) => {
-            <span key={idx}>{author}</span>;
-          })
-        : ''}
+      <span className='book-author'>{authors}</span>
       <table>
         <thead>
           <tr className='book-data_row'>

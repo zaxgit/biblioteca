@@ -30,7 +30,6 @@ export default function AddBook() {
               bookId: item.id,
               title: item.volumeInfo.title,
               subtitle: item.volumeInfo.subtitle,
-              mainAuthor: item.volumeInfo.authors[0],
               authors: item.volumeInfo.authors,
               averageRating: item.volumeInfo.averageRating,
               categories: item.volumeInfo.categories,
@@ -61,7 +60,7 @@ export default function AddBook() {
           />
         </div>
       </form>
-      {fetchedBooks ? (
+      {fetchedBooks.length > 0 ? (
         <BookList books={fetchedBooks} />
       ) : (
         <p>Search for books!</p>

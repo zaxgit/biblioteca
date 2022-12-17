@@ -1,3 +1,4 @@
+import Layout from '../components/layout/layout';
 import BookList from '../components/book/book-list';
 const DEMO_BOOKS = [
   {
@@ -22,8 +23,8 @@ const DEMO_BOOKS = [
 
 export default function Page() {
   return (
-    <div>
+    <Layout>
       <BookList books={DEMO_BOOKS} />
-    </div>
+    </Layout>
   );
 }

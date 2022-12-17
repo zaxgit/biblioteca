@@ -9,8 +9,7 @@ export default function BookList({ books }) {
             key={book.bookId}
             title={book.title}
             subtitle={book.subtitle}
-            mainAuthor={book.mainAuthor}
-            allAuthors={book.authors}
+            authors={book.authors}
             categories={book.categories}
             publishedOn={book.publishedOn}
             publisher={book.publisher}
