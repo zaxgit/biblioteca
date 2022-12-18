@@ -8,7 +8,6 @@ export default function HorizontalBook({
   isOwned,
   pageCount,
 }) {
-  console.log(authors);
   return (
     <li className='h-book'>
       <h3 className='book-title'>{title}</h3>

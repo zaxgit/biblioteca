@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LogoutButton from '../forms/logoutButton';
 
 export default function Header() {
   return (
@@ -17,10 +18,10 @@ export default function Header() {
                 <Link href='/wishlist'>Wishlist</Link>
               </li>
               <li>
-                <Link href='/profile'>Profile</Link>
+                <Link href='/profile/[id]'>Profile</Link>
               </li>
               <li>
-                <button className='btn btn-primary'>Login</button>
+                <LogoutButton />
               </li>
             </ul>
           </nav>

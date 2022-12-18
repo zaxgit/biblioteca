@@ -17,7 +17,7 @@ export default function AddBook() {
 
   useEffect(() => {
     if (isLongEnough) {
-      fetch(`/api/add-book?q=${query ? query : ''}`)
+      fetch(`/api/get-book?q=${query ? query : ''}`)
         .then((res) => {
           if (!res.ok) {
             throw Error;
