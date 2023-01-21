@@ -1,7 +1,7 @@
-import BookList from '../components/book/book-list';
+import BookList from '../library/book/book-list';
 import { useState, useEffect } from 'react';
 
-export default function AddBook() {
+export default function SearchBooks() {
   // const searchTerm = useRef();
   const [query, setQuery] = useState('');
   const [fetchedBooks, setFetchedBooks] = useState([]);
@@ -27,16 +27,16 @@ export default function AddBook() {
         .then((data) => {
           const fetchedItems = data.items.map((item) => {
             return {
-              bookId: item.id,
+              id: item.id,
               title: item.volumeInfo.title,
               subtitle: item.volumeInfo.subtitle,
-              authors: item.volumeInfo.authors,
-              averageRating: item.volumeInfo.averageRating,
-              categories: item.volumeInfo.categories,
-              description: item.volumeInfo.description,
-              publishedOn: item.volumeInfo.publishedDate,
+              author: item.volumeInfo.authors,
               publisher: item.volumeInfo.publisher,
-              pageCount: item.volumeInfo.pageCount,
+              published_on: item.volumeInfo.publishedDate,
+              page_count: item.volumeInfo.pageCount,
+              description: item.volumeInfo.description,
+              categories: item.volumeInfo.categories,
+              // image_link: item.volumeInfo.image_links.thumbnail,
             };
           });
           setFetchedBooks(fetchedItems);
@@ -49,22 +49,18 @@ export default function AddBook() {
       <form onSubmit={submitHandler}>
         <div className='add-book-control'>
           <label className='add-book-label' htmlFor='term'>
-            Search
+            Search Addable Books
           </label>
           <input
             className='add-book-input'
             type='text'
             name='term'
-            placeholder='Search'
+            placeholder='Search Books'
             onChange={inputChangeHandler}
           />
         </div>
       </form>
-      {fetchedBooks.length > 0 ? (
-        <BookList books={fetchedBooks} />
-      ) : (
-        <p>Search for books!</p>
-      )}
+      {fetchedBooks.length > 0 ? <BookList books={fetchedBooks} /> : ''}
     </div>
   );
 }
