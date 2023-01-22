@@ -1,6 +1,20 @@
 .h-book {
+  position: relative;
   background-color: rgba(#000, 0.25);
   box-shadow: 0 1rem 3rem rgba(#000, 0.45);
   border-radius: 0.5rem;
   color: #f1f1f1;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  .thumb {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .book-actions {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+  }
 }

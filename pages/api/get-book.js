@@ -7,6 +7,5 @@ export default async function addBook(req, res) {
   );
 
   const foundBooks = await getBooks.json();
-
   return res.status(200).json(foundBooks);
 }

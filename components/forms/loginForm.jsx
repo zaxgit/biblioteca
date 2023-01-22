@@ -8,7 +8,7 @@ export default function LoginForm() {
 
   async function signInWithEmail(e) {
     e.preventDefault();
-    const { data, error } = await supabase.auth.signInWithPassword({
+    await supabase.auth.signInWithPassword({
       email: emailRef.current.value,
       password: passwordRef.current.value,
     });

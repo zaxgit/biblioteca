@@ -1,23 +1,17 @@
+import { useState, useRef } from 'react';
 import BookList from '../library/book/book-list';
-import { useState, useEffect } from 'react';
 
-export default function SearchBooks() {
-  // const searchTerm = useRef();
-  const [query, setQuery] = useState('');
+export default function SearchAddable() {
+  const searchTerm = useRef();
   const [fetchedBooks, setFetchedBooks] = useState([]);
-
-  const isLongEnough = query.length > 0;
-  const inputChangeHandler = (e) => {
-    setQuery(e.target.value);
-  };
 
   const submitHandler = (e) => {
     e.preventDefault();
-  };
+    const query = searchTerm.current.value;
+    const isLongEnough = query.length > 0;
 
-  useEffect(() => {
     if (isLongEnough) {
-      fetch(`/api/get-book?q=${query ? query : ''}`)
+      fetch(`/api/get-book?q=${query && query}`)
         .then((res) => {
           if (!res.ok) {
             throw Error;
@@ -25,6 +19,7 @@ export default function SearchBooks() {
           return res.json();
         })
         .then((data) => {
+          console.log(data);
           const fetchedItems = data.items.map((item) => {
             return {
               id: item.id,
@@ -36,28 +31,32 @@ export default function SearchBooks() {
               page_count: item.volumeInfo.pageCount,
               description: item.volumeInfo.description,
               categories: item.volumeInfo.categories,
-              // image_link: item.volumeInfo.image_links.thumbnail,
+              google_thumbnail: item.volumeInfo.imageLinks.thumbnail,
             };
           });
           setFetchedBooks(fetchedItems);
         });
     }
-  }, [query, isLongEnough]);
+  };
 
   return (
     <div className='add-book'>
       <form onSubmit={submitHandler}>
         <div className='add-book-control'>
-          <label className='add-book-label' htmlFor='term'>
+          {/* <label className='add-book-label' htmlFor='term'>
             Search Addable Books
-          </label>
+          </label> */}
           <input
+            autoFocus
             className='add-book-input'
             type='text'
-            name='term'
+            name='query'
             placeholder='Search Books'
-            onChange={inputChangeHandler}
+            ref={searchTerm}
           />
+        </div>
+        <div className='form-actions'>
+          <button type='submit'>Search Books</button>
         </div>
       </form>
       {fetchedBooks.length > 0 ? <BookList books={fetchedBooks} /> : ''}

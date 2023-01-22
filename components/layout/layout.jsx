@@ -16,7 +16,7 @@ export default function Layout({ children }) {
                   <Link href='/'>Library</Link>
                 </li>
                 <li>
-                  <Link href='/profile/[id]'>Profile</Link>
+                  <Link href='/profile'>Profile</Link>
                 </li>
                 <li>
                   <LogoutButton />

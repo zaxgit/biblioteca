@@ -28,10 +28,10 @@ export default function Library() {
   }, [user]);
 
   return (
-    <>
+    <div className='library'>
       <Controls />
       {error && <p>OOPs... failed to load books</p>}
       {books && <BookList books={books} />}
-    </>
+    </div>
   );
 }

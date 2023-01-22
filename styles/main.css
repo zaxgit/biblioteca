@@ -18,19 +18,66 @@ li {
   }
 }
 .h-book {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.25);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.45);
   border-radius: 0.5rem;
   color: #f1f1f1;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.h-book .thumb {
+  float: left;
+  margin-right: 20px;
+}
+.h-book .book-actions {
+  position: absolute;
+  top: 20px;
+  right: 25px;
 }
 
-.footer {
-  width: 100%;
-  height: 10vh;
-  background-color: rgba(0, 0, 0, 0.25);
+.modal {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal .modal-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: inherit;
+  width: inherit;
+}
+.modal .modal-content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 33%;
+  width: 33%;
+  padding: 25px;
+  background: #071521;
+  border-radius: 10px;
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.3);
+  overflow: scroll;
+}
+.modal .modal-button--close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.library {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .header-container {
@@ -48,6 +95,12 @@ li {
 }
 .header-container .header-inner ul :not(:last-child) {
   margin-right: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=main.css.map */
