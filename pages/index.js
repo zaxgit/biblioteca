@@ -9,8 +9,6 @@ import Library from '../components/library/library';
 export default function Home() {
   const user = useUser();
 
-  if (!user) return <Auth />;
-
   return (
     <>
       <Head>
@@ -18,9 +16,7 @@ export default function Home() {
         <meta name='description' content='Your library app' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Layout>
-        <Library />
-      </Layout>
+      <Layout>{!user ? <Auth /> : <Library />}</Layout>
     </>
   );
 }

@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import LogoutButton from '../forms/logoutButton';
 
+import { useUser } from '@supabase/auth-helpers-react';
+
 export default function Layout({ children }) {
+  const user = useUser();
+
   return (
     <>
       <header className='header-container'>
@@ -15,9 +19,11 @@ export default function Layout({ children }) {
                 <li>
                   <Link href='/'>Library</Link>
                 </li>
-                <li>
-                  <Link href='/profile'>Profile</Link>
-                </li>
+                {user && (
+                  <li>
+                    <Link href='/profile'>Profile</Link>
+                  </li>
+                )}
                 <li>
                   <LogoutButton />
                 </li>
