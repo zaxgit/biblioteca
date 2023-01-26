@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import AddBookButton from './add-book-button';
+import AddBookButton from './addBookButton';
 import RemoveBookButton from './removeBookButton';
 
 export default function HorizontalBook(props) {

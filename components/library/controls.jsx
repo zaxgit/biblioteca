@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import SearchAddableBooks from '../forms/SearchAddableBooks';
+import SearchAddableBooks from '../forms/searchAddableBooks';
 import Modal from '../layout/modal';
 
 export default function Controls() {
