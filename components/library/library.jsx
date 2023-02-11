@@ -4,7 +4,7 @@ import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react';
 
 import useBookStore from '../../store/useBookStore';
 import Controls from './controls';
-import BookList from './book/book-list';
+import BookList from './book/bookList';
 
 export default function Library() {
   const supabase = useSupabaseClient();
