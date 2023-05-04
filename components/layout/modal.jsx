@@ -6,10 +6,11 @@ export default function Modal({ isOpen, closeModal, children }) {
         <div className='modal'>
           <div className='modal-background' onClick={closeModal}></div>
           <div className='modal-content'>
-            <button className='modal-button--close' onClick={closeModal}>
+            {/* <button className='modal-button--close' onClick={closeModal}>
               <IoIosClose />
-            </button>
+            </button> */}
             {children}
+            <button></button>
           </div>
         </div>
       </>
