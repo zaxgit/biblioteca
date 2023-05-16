@@ -12,8 +12,23 @@ li {
   html {
     color-scheme: dark;
   }
+
   body {
-    color: white;
-    background: #071521;
+    background: #fff;
+    color: #5e718d;
+
+    a {
+      text-decoration: none;
+
+      &:visted,
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    ul,
+    ol {
+      list-style-type: none;
+    }
   }
 }

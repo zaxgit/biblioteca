@@ -1,7 +1,7 @@
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 import useBookStore from '../../../store/useBookStore';
 
-import { IoIosAdd } from 'react-icons/io';
+import { Add } from '../../../icons/icons';
 
 export default function AddBookButton({ book }) {
   const supabase = useSupabaseClient();
@@ -33,8 +33,8 @@ export default function AddBookButton({ book }) {
   };
 
   return (
-    <button className='btn icon-btn add-book-btn' onClick={addBook}>
-      <IoIosAdd />
+    <button className='btn add-book-btn' onClick={addBook}>
+      <Add />
     </button>
   );
 }

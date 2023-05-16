@@ -1,8 +1,7 @@
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import useBookStore from '../../../store/useBookStore';
 
-import { IoIosRemove } from 'react-icons/io';
-
+import { Trash } from '../../../icons/icons';
 export default function RemoveBookButton({ id }) {
   const supabase = useSupabaseClient();
 
@@ -14,8 +13,8 @@ export default function RemoveBookButton({ id }) {
   };
 
   return (
-    <button className='btn btn-primary' onClick={removeBook}>
-      <IoIosRemove />
+    <button className='icon-btn' onClick={removeBook}>
+      <Trash />
     </button>
   );
 }

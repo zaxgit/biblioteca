@@ -10,20 +10,19 @@ export default function Layout({ children }) {
     <>
       <header className='header-container'>
         <div className='header-inner'>
-          {/* <div className='logo-box'>
-          <img src='#' />
-        </div> */}
+          <Link href='/' className='brand'>
+            Biblioteca
+          </Link>
           <div className='nav-container'>
             <nav className='nav'>
               <ul>
                 <li>
-                  <Link href='/'>Library</Link>
-                </li>
-                {user && (
-                  <li>
+                  {user ? (
                     <Link href='/profile'>Profile</Link>
-                  </li>
-                )}
+                  ) : (
+                    <Link href='/'>Login</Link>
+                  )}
+                </li>
                 <li>
                   <LogoutButton />
                 </li>

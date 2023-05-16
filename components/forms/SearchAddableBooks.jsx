@@ -23,15 +23,15 @@ export default function SearchAddable() {
           const fetchedItems = data.items.map((item) => {
             return {
               id: item.id,
-              title: item.volumeInfo.title,
-              subtitle: item.volumeInfo.subtitle,
-              author: item.volumeInfo.authors,
-              publisher: item.volumeInfo.publisher,
-              published_on: item.volumeInfo.publishedDate,
-              page_count: item.volumeInfo.pageCount,
-              description: item.volumeInfo.description,
-              categories: item.volumeInfo.categories,
-              google_thumbnail: item.volumeInfo.imageLinks.thumbnail,
+              title: item.volumeInfo?.title,
+              subtitle: item.volumeInfo?.subtitle,
+              author: item.volumeInfo?.authors,
+              publisher: item.volumeInfo?.publisher,
+              published_on: item.volumeInfo?.publishedDate,
+              page_count: item.volumeInfo?.pageCount,
+              description: item.volumeInfo?.description,
+              categories: item.volumeInfo?.categories,
+              google_thumbnail: item.volumeInfo?.imageLinks?.thumbnail,
             };
           });
           setFetchedBooks(fetchedItems);

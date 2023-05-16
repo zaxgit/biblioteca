@@ -49,7 +49,6 @@ export default function Profile() {
   return (
     <Layout>
       <div className='profile'>
-        {/* <bold>Hello, </bold> */}
         <h1>Welcome, </h1>
         <h2>{name}</h2>
         <h2>Stats: </h2>
