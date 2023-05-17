@@ -1,7 +1,8 @@
+'use client';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 import useBookStore from '../../../store/useBookStore';
 
-import { Add } from '../../../icons/icons';
+import { Add } from '../../../lib/icons/icons';
 
 export default function AddBookButton({ book }) {
   const supabase = useSupabaseClient();

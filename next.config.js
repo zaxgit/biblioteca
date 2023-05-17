@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['books.google.com'],
   },
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;

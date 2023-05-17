@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "kill -9 $(lsof -ti:3000,3001) && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,13 +12,12 @@
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
     "@supabase/auth-helpers-nextjs": "^0.5.2",
-    "@supabase/auth-helpers-react": "^0.3.1",
     "@supabase/auth-ui-react": "^0.2.6",
     "@supabase/supabase-js": "^2.2.1",
     "eslint": "8.27.0",
     "eslint-config-next": "^13.0.5",
     "lit": "^2.7.3",
-    "next": "^13.0.5",
+    "next": "^13.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",

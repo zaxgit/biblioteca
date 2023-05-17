@@ -1,7 +1,9 @@
+'use client';
+
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import useBookStore from '../../../store/useBookStore';
 
-import { Trash } from '../../../icons/icons';
+import { Trash } from '../../../lib/icons/icons';
 export default function RemoveBookButton({ id }) {
   const supabase = useSupabaseClient();
 

@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import AddBookButton from './addBookButton';
 import RemoveBookButton from './removeBookButton';
-import { Book } from '../../../lib/litComponents/book';
+import { Book } from '../../../lib/elements/book';
 
 import Link from 'next/link';
-import { RightArr } from '../../../icons/icons';
+import { RightArr } from '../../../lib/icons/icons';
 export default function HorizontalBook(props) {
   const {
     title,
