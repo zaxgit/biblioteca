@@ -1,8 +1,24 @@
-.header-inner {
+.navBar {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 85%;
+  margin: 0 auto;
 
-  ul {
-    display: inline;
+  .brand {
+    font-family: Pacifico, sans-serif;
+    text-decoration: none;
+    color: #2d3643;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }

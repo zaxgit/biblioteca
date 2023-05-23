@@ -1,8 +1,7 @@
 'use client';
 import { useState, useRef } from 'react';
-// import { useSupabase } from '../../supabase-provider';
 
-import BookList from '../library/book/bookList';
+import SearchResults from '../nav/searchResults';
 
 export default function SearchAddableBooks() {
   const searchTerm = useRef();
@@ -14,7 +13,7 @@ export default function SearchAddableBooks() {
     const isLongEnough = query.length > 0;
 
     if (isLongEnough) {
-      fetch(`/api/get-book?q=${query && query}`)
+      fetch(`/api/get-books?q=${query}`)
         .then((res) => {
           if (!res.ok) {
             throw Error;
@@ -50,7 +49,7 @@ export default function SearchAddableBooks() {
             Search Addable Books
           </label> */}
           <input
-            autoFocus
+            // autoFocus
             className='add-book-input'
             type='text'
             name='query'
@@ -62,7 +61,7 @@ export default function SearchAddableBooks() {
           <button type='submit'>Search Books</button>
         </div>
       </form>
-      {fetchedBooks.length > 0 ? <BookList books={fetchedBooks} /> : ''}
+      {fetchedBooks.length > 0 ? <SearchResults books={fetchedBooks} /> : null}
     </div>
   );
 }

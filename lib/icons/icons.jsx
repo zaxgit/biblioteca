@@ -11,8 +11,8 @@ export const Add = ({ width = '20', height = '20', className }) => {
       <path
         d='M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z'
         stroke='#5E718D'
-        stroke-width='1.5'
-        stroke-linecap='round'
+        strokeWidth='1.5'
+        strokeLinecap='round'
       />
     </svg>
   );

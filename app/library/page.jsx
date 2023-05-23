@@ -10,8 +10,6 @@ export default async function Library() {
     cookies,
   });
 
-  const { data, error } = await supabase.auth.getSession();
-
   const { data: books } = await supabase.from('books').select();
 
   return (

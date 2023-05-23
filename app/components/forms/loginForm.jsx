@@ -1,12 +1,14 @@
 'use client';
 import { useRef } from 'react';
 import { useSupabase } from '../../supabase-provider';
+import { useRouter } from 'next/navigation';
 
 export default function LoginForm() {
   const emailRef = useRef();
   const passwordRef = useRef();
 
   const { supabase } = useSupabase();
+  const router = useRouter();
 
   const signIn = (e) => {
     e.preventDefault();
@@ -14,7 +16,7 @@ export default function LoginForm() {
       email: emailRef.current.value,
       password: passwordRef.current.value,
     });
-    console.log('signed in!');
+    router.push('/library');
   };
 
   return (
