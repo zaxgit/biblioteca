@@ -11,9 +11,8 @@
   },
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
-    "@supabase/auth-helpers-nextjs": "^0.5.2",
-    "@supabase/auth-ui-react": "^0.2.6",
-    "@supabase/supabase-js": "^2.2.1",
+    "@supabase/auth-helpers-nextjs": "^0.6.1",
+    "@supabase/supabase-js": "^2.22.0",
     "eslint": "8.27.0",
     "eslint-config-next": "^13.0.5",
     "lit": "^2.7.3",
