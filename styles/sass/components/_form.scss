@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  .form-control {
+    .form-label {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #8897ae;
+    }
+    .form-input {
+      border: 1px solid #afbaca;
+      background: #ffffff;
+      border-radius: 6px;
+      width: 200px;
+    }
+  }
+}

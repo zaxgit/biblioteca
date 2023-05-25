@@ -7,7 +7,7 @@
   margin: 0 auto;
 
   .brand {
-    font-family: Pacifico, sans-serif;
+    font-family: var(--font-pacifico);
     text-decoration: none;
     color: #2d3643;
     font-style: normal;
@@ -18,7 +18,6 @@
 
     &:visited {
       text-decoration: none;
-      color: inherit;
     }
   }
 }

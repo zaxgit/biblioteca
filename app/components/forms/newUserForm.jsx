@@ -14,18 +14,18 @@ export default function NewUserForm() {
       email: emailRef.current.value,
       password: passwordRef.current.value,
     });
-    console.log('signed up!');
 
     // clear inputs
   };
 
   return (
-    <form onSubmit={registerUser}>
+    <form className='form' onSubmit={registerUser}>
       <div className='form-control'>
         <label className='form-label' htmlFor='email'>
           Email
         </label>
         <input
+          autoFocus
           className='form-input'
           placeholder='Email'
           type='email'

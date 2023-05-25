@@ -16,7 +16,8 @@ export default function LoginForm() {
       email: emailRef.current.value,
       password: passwordRef.current.value,
     });
-    router.push('/library');
+
+    // router.push('/library');
   };
 
   return (
